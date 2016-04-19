@@ -1,0 +1,24 @@
+{
+  "name": "react-mega-sidenav",
+  "version": "0.0.1",
+  "description": "A mega sidenav you will love",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus9ias/react-mega-sidenav.git"
+  },
+  "keywords": [
+    "react",
+    "sidenav"
+  ],
+  "author": "Jesús Escamilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesus9ias/react-mega-sidenav/issues"
+  },
+  "homepage": "https://github.com/jesus9ias/react-mega-sidenav#readme",
+  "dependencies": {
+    "react": "^15.0.1"
+  }
+}
