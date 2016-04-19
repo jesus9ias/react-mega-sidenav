@@ -1,2 +1,2 @@
-# react-mega-slider
-A mega react-slider you will love
+# react-mega-sidenav
+A mega react-sidenav you will love
