@@ -8,5 +8,5 @@ Create a sidenav for react.js that can be used on multiple ways, such as horizon
 ## Instalation
 
 ```sh
-npm install recat-mega-sidenav
+npm install react-mega-sidenav
 ```
