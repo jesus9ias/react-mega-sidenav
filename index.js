@@ -1,10 +1,6 @@
-import React from 'react';
-
-class megaSidenav extends React.Component{
-  render() {
-    return (<div></div>);
-  }
-}
+var rms = require('./build/index.js');
 
 
-export default megaSidenav;
+module.exports = {
+  'megaSidenav': rms.megaSidenav
+};
