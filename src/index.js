@@ -1,3 +1,5 @@
 import megaSidenav from './components/megaSidenav';
 
-export {megaSidenav}
+module.exports = {
+  'megaSidenav': megaSidenav
+}
