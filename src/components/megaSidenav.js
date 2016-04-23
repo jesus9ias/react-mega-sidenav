@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class megaSidenav extends Component{
+export default class MegaSidenav extends Component{
   render() {
     return (<div>Hi! megaSidenav</div>);
   }

@@ -2,10 +2,11 @@
   "name": "react-mega-sidenav",
   "version": "0.0.1",
   "description": "A mega sidenav you will love",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir build",
-    "build2": "gulp build"
+    "build4": "babel src --presets babel-preset-es2015 --out-dir build",
+    "build2": "gulp build",
+    "build3": "6to5 --modules common src/index.js > build/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,14 +23,16 @@
   },
   "homepage": "https://github.com/jesus9ias/react-mega-sidenav#readme",
   "dependencies": {
-    "invariant": "^2.2.1",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "react-addons-shallow-compare": "^15.0.1",
+    "react-virtualized": "^6.1.2"
   },
   "peerDependencies": {
-    "invariant": "^2.2.1",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "react-addons-shallow-compare": "^15.0.1",
+    "react-virtualized": "^6.1.2"
   },
   "devDependencies": {
     "babelify": "^6",

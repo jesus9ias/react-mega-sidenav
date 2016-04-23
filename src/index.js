@@ -1,5 +1,5 @@
-import megaSidenav from './components/megaSidenav';
+import MegaSidenav from './components/megaSidenav';
 
 module.exports = {
-  'megaSidenav': megaSidenav
+  MegaSidenav: MegaSidenav
 }
