@@ -1,21 +1,7 @@
-var gulp = require('gulp')
-var browserify = require('browserify')
-var babelify = require('babelify')
-var source = require('vinyl-source-stream')
-
-
-gulp.task('build', function() {
-  browserify({
-    entries: './src/index.js',
-    extensions: ['.jsx','.js'],
-    debug: true
-  })
-  .transform(babelify)
-  .bundle()
-  .pipe(source('index.js'))
-  .pipe(gulp.dest('./build'))
-})
-
-
-
-gulp.task('default')
+var gulp = require('gulp');
+var webpack = require('webpack-stream');
+gulp.task('default', function() {
+  return gulp.src('src/index.js')
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(gulp.dest('build/'));
+});
