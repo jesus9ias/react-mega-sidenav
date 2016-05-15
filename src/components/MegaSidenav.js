@@ -19,7 +19,7 @@ class MegaSidenav extends Component{
     if(this.props.open == true){
       return (
         <div className="megaSidenav open">
-          <div className="megaSidenav-block" style={sidenavStyles()}>
+          <div className="megaSidenav-block" style={sidenavStyles(this.props.orientation)}>
             <h2>{this.props.title}</h2>
             {
               this.props.useClose == true? <a onClick={this.close.bind(this)}>X</a> : null
