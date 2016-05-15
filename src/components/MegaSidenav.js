@@ -1,5 +1,7 @@
-import React, {Component} from 'react';
-import SidenavItem from './SidenavItem';
+import React, {Component} from 'react'
+import SidenavItem from './SidenavItem'
+import backdropStyles from '../styles/backdrop'
+import sidenavStyles from '../styles/sidenav'
 
 class MegaSidenav extends Component{
 
@@ -7,11 +9,17 @@ class MegaSidenav extends Component{
     this.props.close();
   }
 
+  closeByBackdrop(){
+    if(this.props.closeOnBackdrop == true){
+      this.props.close();
+    }
+  }
+
   render(){
     if(this.props.open == true){
       return (
         <div className="megaSidenav open">
-          <div className="megaSidenav-block">
+          <div className="megaSidenav-block" style={sidenavStyles()}>
             <h2>{this.props.title}</h2>
             {
               this.props.useClose == true? <a onClick={this.close.bind(this)}>X</a> : null
@@ -27,7 +35,9 @@ class MegaSidenav extends Component{
               {this.props.children}
             </div>
           </div>
-          <div className="megaSidenav-backdrop"></div>
+          {
+            this.props.backdrop == true ? <div className="megaSidenav-backdrop" onClick={this.closeByBackdrop.bind(this)} style={backdropStyles()}></div> : null
+          }
         </div>
       );
     }else{
