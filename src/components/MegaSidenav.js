@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import SidenavItem from './SidenavItem'
 import backdropStyles from '../styles/backdrop'
 import sidenavStyles from '../styles/sidenav'
+import FaClose from 'react-icons/lib/fa/close';
 
 class MegaSidenav extends Component{
 
@@ -22,7 +23,7 @@ class MegaSidenav extends Component{
           <div className="megaSidenav-block" style={sidenavStyles(this.props.orientation)}>
             <h2>{this.props.title}</h2>
             {
-              this.props.useClose == true? <a onClick={this.close.bind(this)}>X</a> : null
+              this.props.useClose == true? <a onClick={this.close.bind(this)}><FaClose /></a> : null
             }
             <div className="megaSidenav-itemList">
               {
