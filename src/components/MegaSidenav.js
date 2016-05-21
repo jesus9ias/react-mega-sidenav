@@ -24,7 +24,7 @@ class MegaSidenav extends Component{
       return (
         <InlineCss stylesheet={sidenavStyles(this.props.orientation) + backdropStyles()}>
           <div className="megaSidenav open">
-            <div className="megaSidenav-block">
+            <div className="megaSidenav-block" style={this.props.sidenavStyles}>
               <h2>{this.props.title}</h2>
               {
                 this.props.useClose == true? <a onClick={this.close.bind(this)}><FaClose /></a> : null
@@ -32,7 +32,7 @@ class MegaSidenav extends Component{
               <div className="megaSidenav-itemList">
                 {
                   this.props.items.map((item, i) => {
-                    return <SidenavItem key={i}>{item}</SidenavItem>
+                    return <SidenavItem key={i} itemStyles={this.props.itemStyles}>{item}</SidenavItem>
                   })
                 }
               </div>
@@ -62,6 +62,8 @@ MegaSidenav.defaultProps = {
   closeOnBackdrop: true,
   title: '',
   toggleIcon: '',
+  sidenavStyles: {},
+  itemStyles: {}
 }
 
 export default MegaSidenav
