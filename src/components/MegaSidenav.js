@@ -47,7 +47,7 @@ class MegaSidenav extends Component{
         </InlineCss>
       );
     }else{
-      return (<div className="megaSidenav close"></div>)
+      return (<div className="megaSidenav close"><div className="megaSidenav-block"></div></div>)
     }
   }
 }
