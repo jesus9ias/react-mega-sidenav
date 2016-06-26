@@ -3,10 +3,11 @@ import sidenavAnims from './anims.js';
 export default function sidenavStyles(orientation){
   let style = `
     & .megaSidenav-block {
+      display: flex;
+      flex-direction: column;
       position: fixed;
       background: white;
       z-index: 1000;
-      overflow-y: auto;
     }
 
     & .megaSidenav.open .megaSidenav-block{
@@ -17,6 +18,30 @@ export default function sidenavStyles(orientation){
     & .megaSidenav.close .megaSidenav-block{
       -webkit-animation: 0.3s fadeOutLeft;
 		  animation: 0.3s fadeOutLeft;
+    }
+
+    & .megaSidenav-head{
+      display: flex;
+      flex-direction: row;
+    }
+
+    & .megaSidenav-head .megaSidenav-title{
+      margin: 0px;
+      padding: 5px;
+      flex: 1;
+    }
+
+    & .megaSidenav-head .megaSidenav-close{
+      margin: 0px;
+      padding: 5px;
+      line-height: 30px;
+    }
+
+    & .megaSidenav-body{
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
   `;
   if(orientation == 'left'){

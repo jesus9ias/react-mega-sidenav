@@ -25,19 +25,23 @@ class MegaSidenav extends Component{
         <InlineCss stylesheet={sidenavStyles(this.props.orientation) + backdropStyles()}>
           <div className="megaSidenav open">
             <div className="megaSidenav-block" style={this.props.sidenavStyles}>
-              <h2>{this.props.title}</h2>
-              {
-                this.props.useClose == true? <a onClick={this.close.bind(this)}><FaClose /></a> : null
-              }
-              <div className="megaSidenav-itemList">
+              <div className="megaSidenav-head" style={this.props.headStyles}>
+                <h2 className="megaSidenav-title">{this.props.title}</h2>
                 {
-                  this.props.items.map((item, i) => {
-                    return <SidenavItem key={i} itemStyles={this.props.itemStyles}>{item}</SidenavItem>
-                  })
+                  this.props.useClose == true? <a className="megaSidenav-close" onClick={this.close.bind(this)}><FaClose /></a> : null
                 }
               </div>
-              <div className="megaSidenav-content">
-                {this.props.children}
+              <div className="megaSidenav-body" style={this.props.bodyStyles}>
+                <div className="megaSidenav-itemList">
+                  {
+                    this.props.items.map((item, i) => {
+                      return <SidenavItem key={i} itemStyles={this.props.itemStyles}>{item}</SidenavItem>
+                    })
+                  }
+                </div>
+                <div className="megaSidenav-content">
+                  {this.props.children}
+                </div>
               </div>
             </div>
             {
@@ -63,6 +67,8 @@ MegaSidenav.defaultProps = {
   title: '',
   toggleIcon: '',
   sidenavStyles: {},
+  headStyles: {},
+  bodyStyles: {},
   itemStyles: {}
 }
 
